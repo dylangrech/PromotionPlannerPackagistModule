@@ -1,17 +1,22 @@
 {
     "name": "dylangrech/promotion-planner",
     "description": "Module for planning a promotion for an article, category or manufacturer",
-    "type": "oxideshop-module",
     "version": "1.0.0",
-    "autoload": {
-        "psr-4": {
-            "Dylangrech\\PromotionPlanner\\": "../../../source/modules/pp/PromotionPlaner"
-        }
-    },
+    "type": "oxideshop-module",
     "authors": [
         {
             "name": "DylanGrech",
             "email": "dylan.grech@fatchip.de"
         }
-    ]
+    ],
+    "extra": {
+        "oxideshop": {
+            "target-directory": "pp/PromotionPlaner"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Dylangrech\\PromotionPlanner\\": "src/"
+        }
+    }
 }

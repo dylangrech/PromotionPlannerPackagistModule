@@ -4,7 +4,7 @@
 <h2>Composer Installation</h2>
 <h3>Second Step (Composer Installation):</h3>
 <p>Afterwards type in the following in the command log:</p>
-<code>  composer require pp/PromotionPlanner </code>
+<code>  composer require dylangrech/promotion-planner </code>
 <p>Installation through Composer should now be complete.</p>
 <h2>Manual Installation</h2>
 <h3>Second Step (Manual Installation):</h3>

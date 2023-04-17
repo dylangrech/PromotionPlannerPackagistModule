@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OX>
+    <OXMENU id="NAVIGATION_ESHOPADMIN">
+        <MAINMENU id="mxmainmenu">
+            <SUBMENU id="mxmanufacturer" cl="manufacturer" list="manufacturer_list">
+                <TAB id="FC_PROMOTION_PLANNER_TITLE" cl="fc_manufacturer_promotion"/>
+            </SUBMENU>
+        </MAINMENU>
+        <MAINMENU id="mxmanageprod">
+            <SUBMENU id="mxarticles" cl="article" list="article_list">
+                <TAB id="FC_PROMOTION_PLANNER_TITLE" cl="fc_article_promotion"/>
+            </SUBMENU>
+            <SUBMENU id="mxcategories" cl="category" list="category_list">
+                <TAB id="FC_PROMOTION_PLANNER_TITLE" cl="fc_category_promotion"/>
+            </SUBMENU>
+        </MAINMENU>
+    </OXMENU>
+</OX>

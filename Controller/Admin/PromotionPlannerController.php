@@ -1,6 +1,6 @@
 <?php
 
-namespace pp\PromotionPlanner\Controller\Admin;
+namespace Fatchip\PromotionPlanner\Controller\Admin;
 
 use OxidEsales\Eshop\Application\Controller\Admin\AdminDetailsController;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace pp\PromotionPlanner\Model;
+namespace Fatchip\PromotionPlanner\Model;
 
-use pp\PromotionPlanner\Model\PromotionPlanner;
+use Fatchip\PromotionPlanner\Model\PromotionPlanner;
 
 class Category extends Category_parent
 {

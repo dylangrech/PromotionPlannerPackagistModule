@@ -1,6 +1,6 @@
 <?php
 
-namespace pp\PromotionPlanner\Model;
+namespace Fatchip\PromotionPlanner\Model;
 
 class PromotionPlanner
 {

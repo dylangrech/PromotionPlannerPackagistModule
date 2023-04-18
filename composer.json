@@ -11,12 +11,12 @@
     ],
     "extra": {
         "oxideshop": {
-            "target-directory": "pp/PromotionPlanner"
+            "target-directory": "fc/promotionplanner"
         }
     },
     "autoload": {
         "psr-4": {
-            "pp\\PromotionPlanner\\": "../../../source/modules/pp/PromotionPlanner"
+            "Fatchip\\PromotionPlanner\\": "./"
         }
     }
 }

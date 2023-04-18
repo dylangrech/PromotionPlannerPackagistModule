@@ -1,6 +1,6 @@
 <?php
 
-namespace pp\PromotionPlanner\Core\Setup;
+namespace Fatchip\PromotionPlanner\Core\Setup;
 
 use OxidEsales\Eshop\Core\Base;
 use OxidEsales\Eshop\Core\DatabaseProvider;

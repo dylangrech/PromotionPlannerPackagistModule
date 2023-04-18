@@ -28,9 +28,9 @@ $aModule = [
         'fc_manufacturer_promotion' => \Fatchip\PromotionPlanner\Controller\Admin\ManufacturerPromotionController::class,
     ],
     'templates'   => [
-        'fc_article_promotion.tpl'      => 'fc/promotionplanner/views/admin/tpl/fc_article_promotion.tpl',
-        'fc_category_promotion.tpl'      => 'fc/promotionplanner/views/admin/tpl/fc_category_promotion.tpl',
-        'fc_manufacturer_promotion.tpl'      => 'fc/promotionplanner/views/admin/tpl/fc_manufacturer_promotion.tpl',
+        'fc_article_promotion.tpl'      => 'fc/fcpromotionplanner/views/admin/tpl/fc_article_promotion.tpl',
+        'fc_category_promotion.tpl'      => 'fc/fcpromotionplanner/views/admin/tpl/fc_category_promotion.tpl',
+        'fc_manufacturer_promotion.tpl'      => 'fc/fcpromotionplanner/views/admin/tpl/fc_manufacturer_promotion.tpl',
     ],
     'extend'      => [
         \OxidEsales\Eshop\Application\Model\Article::class => \Fatchip\PromotionPlanner\Model\Article::class,

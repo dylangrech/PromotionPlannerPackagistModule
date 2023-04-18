@@ -1,6 +1,6 @@
 <h1>Installation Guide for the Promotion Planner Module</h1>
 <h3>First Step:</h3>
-<p>Firstly, navigate to the OXID Eshop you want to install this module on. Make sure it is the correct shop you want to install this module on.</p>
+<p>Connect to your webserver via SSH and navigate to the base folder of your OXID eShop (where the composer.json is located)</p>
 <h2>Composer Installation</h2>
 <h3>Second Step (Composer Installation):</h3>
 <p>Afterwards type in the following in the command log:</p>

@@ -11,10 +11,10 @@ class Category extends Category_parent
      *
      * @return bool
      */
-    public function checkIfPromotionIsActive()
+    public function fcCheckIfPromotionIsActive()
     {
-        $iActiveFrom = PromotionPlanner::getPromotionPlannerActiveFrom($this->oxcategories__fcpromotionplanneractivefrom);
-        $iActiveTill = PromotionPlanner::getPromotionPlannerActiveTill($this->oxcategories__fcpromotionplanneractivetill);
+        $iActiveFrom = PromotionPlanner::fcGetPromotionPlannerActiveFrom($this->oxcategories__fcpromotionplanneractivefrom);
+        $iActiveTill = PromotionPlanner::fcGetPromotionPlannerActiveTill($this->oxcategories__fcpromotionplanneractivetill);
         $iCurrentTime = strtotime('now');
         if ($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) {
             return true;
@@ -27,9 +27,9 @@ class Category extends Category_parent
      *
      * @return string|void
      */
-    public function getImageUrl()
+    public function fcGetImageUrl()
     {
-        $sPromotionImage = PromotionPlanner::getPromotionPlannerImageName($this->oxcategories__fcpromotionplannerimage);
+        $sPromotionImage = PromotionPlanner::fcGetPromotionPlannerImageName($this->oxcategories__fcpromotionplannerimage);
         if ($sPromotionImage !== '') {
             $sBaseURL = (new \OxidEsales\Eshop\Core\ViewConfig)->getBaseDir();
             return $sBaseURL.'/out/pictures/master/category/promotionImages/'.$sPromotionImage;

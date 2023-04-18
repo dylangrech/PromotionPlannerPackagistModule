@@ -12,7 +12,7 @@ class PromotionPlanner
      * @param $dbActiveFromColumn
      * @return false|int
      */
-    public static function getPromotionPlannerActiveFrom($dbActiveFromColumn)
+    public static function fcGetPromotionPlannerActiveFrom($dbActiveFromColumn)
     {
         $iActiveFrom = $dbActiveFromColumn->value;
         if ($iActiveFrom !== '') {
@@ -28,7 +28,7 @@ class PromotionPlanner
      * @param $dbActiveTillColumn
      * @return false|int
      */
-    public static function getPromotionPlannerActiveTill($dbActiveTillColumn)
+    public static function fcGetPromotionPlannerActiveTill($dbActiveTillColumn)
     {
         $iActiveTill = $dbActiveTillColumn->value;
         if ($iActiveTill !== '') {
@@ -44,7 +44,7 @@ class PromotionPlanner
      * @param $dbImageNameColumn
      * @return false|string
      */
-    public static function getPromotionPlannerImageName($dbImageNameColumn)
+    public static function fcGetPromotionPlannerImageName($dbImageNameColumn)
     {
         $sPromotionImage = $dbImageNameColumn->value;
         if ($sPromotionImage !== '') {

@@ -11,10 +11,10 @@ class Article extends Article_parent
      *
      * @return bool
      */
-    public function checkIfPromotionIsActive()
+    public function fcCheckIfPromotionIsActive()
     {
-        $iActiveFrom = PromotionPlanner::getPromotionPlannerActiveFrom($this->oxarticles__fcpromotionplanneractivefrom);
-        $iActiveTill = PromotionPlanner::getPromotionPlannerActiveTill($this->oxarticles__fcpromotionplanneractivetill);
+        $iActiveFrom = PromotionPlanner::fcGetPromotionPlannerActiveFrom($this->oxarticles__fcpromotionplanneractivefrom);
+        $iActiveTill = PromotionPlanner::fcGetPromotionPlannerActiveTill($this->oxarticles__fcpromotionplanneractivetill);
         $iCurrentTime = strtotime('now');
         if ($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) {
             return true;
@@ -27,9 +27,9 @@ class Article extends Article_parent
      *
      * @return string|void
      */
-    public function getImageUrl()
+    public function fcGetImageUrl()
     {
-        $sPromotionImage = PromotionPlanner::getPromotionPlannerImageName($this->oxarticles__fcpromotionplannerimage);
+        $sPromotionImage = PromotionPlanner::fcGetPromotionPlannerImageName($this->oxarticles__fcpromotionplannerimage);
         if ($sPromotionImage !== '') {
             $sBaseURL = (new \OxidEsales\Eshop\Core\ViewConfig)->getBaseDir();
             return $sBaseURL.'/out/pictures/master/product/promotionImages/'.$sPromotionImage;

@@ -16,7 +16,7 @@ class CategoryPromotionController extends PromotionPlannerController
     public function render()
     {
         parent::render();
-        $this->loadObjectDetails($this->oModel);
+        $this->fcLoadObjectDetails($this->oModel);
         return $this->_sThisTemplate;
     }
 
@@ -26,6 +26,6 @@ class CategoryPromotionController extends PromotionPlannerController
     public function save()
     {
         parent::save();
-        $this->savePromotionDetails($this->oModel);
+        $this->fcSavePromotionDetails($this->oModel);
     }
 }

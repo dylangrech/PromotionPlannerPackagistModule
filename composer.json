@@ -11,7 +11,7 @@
     ],
     "extra": {
         "oxideshop": {
-            "target-directory": "fc/promotionplanner"
+            "target-directory": "fc/fcpromotionplanner"
         }
     },
     "autoload": {

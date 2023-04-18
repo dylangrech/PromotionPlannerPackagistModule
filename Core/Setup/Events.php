@@ -15,7 +15,7 @@ class Events extends Base
      *
      * @return void
      */
-    public static function rebuildViews()
+    public static function fcRebuildViews()
     {
         if (Registry::getSession()->getVariable('malladmin')) {
             $metaData = oxNew(DbMetaDataHandler::class);
@@ -29,7 +29,7 @@ class Events extends Base
      * @return void
      * @throws \OxidEsales\Eshop\Core\Exception\DatabaseConnectionException
      */
-    public static function alterArticleTableOnActivate()
+    public static function fcAlterTablesOnActivate()
     {
         $oDb = DatabaseProvider::getDb();
         $aQueriesArticle = [
@@ -47,9 +47,9 @@ class Events extends Base
             "ALTER TABLE oxcategories ADD FCPROMOTIONPLANNERACTIVETILL datetime COMMENT 'Promotion Active Till Date' NOT NULL DEFAULT '0000-00-00 00:00:00' AFTER FCPROMOTIONPLANNERACTIVEFROM",
             "ALTER TABLE oxcategories ADD FCPROMOTIONPLANNERIMAGE text COMMENT 'Promotion Image' NOT NULL AFTER FCPROMOTIONPLANNERACTIVETILL",
         ];
-        self::executeQueries("SHOW COLUMNS FROM oxarticles LIKE 'FCPROMOTIONPLANNERACTIVEFROM'", $aQueriesArticle, $oDb);
-        self::executeQueries("SHOW COLUMNS FROM oxmanufacturers LIKE 'FCPROMOTIONPLANNERACTIVEFROM'", $aQueriesManufacturer, $oDb);
-        self::executeQueries("SHOW COLUMNS FROM oxcategories LIKE 'FCPROMOTIONPLANNERACTIVEFROM'", $aQueriesCategory, $oDb);
+        self::fcExecuteQueries("SHOW COLUMNS FROM oxarticles LIKE 'FCPROMOTIONPLANNERACTIVEFROM'", $aQueriesArticle, $oDb);
+        self::fcExecuteQueries("SHOW COLUMNS FROM oxmanufacturers LIKE 'FCPROMOTIONPLANNERACTIVEFROM'", $aQueriesManufacturer, $oDb);
+        self::fcExecuteQueries("SHOW COLUMNS FROM oxcategories LIKE 'FCPROMOTIONPLANNERACTIVEFROM'", $aQueriesCategory, $oDb);
     }
 
     /**
@@ -60,7 +60,7 @@ class Events extends Base
      * @param $oDb
      * @return void
      */
-    public static function executeQueries($sCheckQuery, $aQueries, $oDb)
+    public static function fcExecuteQueries($sCheckQuery, $aQueries, $oDb)
     {
         if ($oDb->getOne($sCheckQuery) === false) {
             foreach ($aQueries as $sQuery) {
@@ -77,8 +77,8 @@ class Events extends Base
      */
     public static function onActivate()
     {
-        self::alterArticleTableOnActivate();
-        self::rebuildViews();
+        self::fcAlterTablesOnActivate();
+        self::fcRebuildViews();
     }
 
 }

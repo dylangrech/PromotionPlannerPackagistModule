@@ -56,7 +56,7 @@ $aModule = [
         ],
     ],
     'events'       => [
-        'onActivate'   => '\fc\promotionplanner\Core\Setup\Events::onActivate'
+        'onActivate'   => '\Fatchip\PromotionPlanner\Core\Setup\Events::onActivate'
     ],
     'settings'    => [],
 ];

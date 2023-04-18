@@ -1,7 +1,7 @@
 {
     "name": "dylangrech/promotion-planner",
     "description": "Module for planning a promotion for an article, category or manufacturer",
-    "version": "1.0.0",
+    "version": "1.3.0.0",
     "type": "oxideshop-module",
     "authors": [
         {

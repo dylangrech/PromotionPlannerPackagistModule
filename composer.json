@@ -1,7 +1,7 @@
 {
     "name": "dylangrech/promotion-planner",
     "description": "Module for planning a promotion for an article, category or manufacturer",
-    "license": "proprietary",
+    "license": "MIT",
     "type": "oxideshop-module",
     "authors": [
         {
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dylangrech\\PromotionPlanner\\": "src/"
+            "pp\\PromotionPlaner\\": "./source/modules/pp/PromotionPlaner"
         }
     }
 }

@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "pp\\PromotionPlaner\\": "./source/modules/pp/PromotionPlaner"
+            "pp\\PromotionPlanner\\": "./source/modules/pp/PromotionPlanner"
         }
     }
 }

@@ -15,8 +15,9 @@ class Category extends Category_parent
     {
         $iActiveFrom = PromotionPlanner::fcGetPromotionPlannerActiveFrom($this->oxcategories__fcpromotionplanneractivefrom);
         $iActiveTill = PromotionPlanner::fcGetPromotionPlannerActiveTill($this->oxcategories__fcpromotionplanneractivetill);
+        $isActive = PromotionPlanner::fcGetPromotionPlannerActiveValue($this->oxcategories__fcpromotionplanneractivepromotion);
         $iCurrentTime = strtotime('now');
-        if ($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) {
+        if (($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) && $isActive === true) {
             return true;
         }
         return false;

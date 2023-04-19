@@ -26,7 +26,7 @@ class ManufacturerPromotionController extends PromotionPlannerController
     public function save()
     {
         parent::save();
-        $this->fcSavePromotionDetails($this->oModel);
+        $this->fcSavePromotionDetails($this->oModel, 'oxmanufacturers__fcpromotionplanneractivepromotion');
     }
 
 }

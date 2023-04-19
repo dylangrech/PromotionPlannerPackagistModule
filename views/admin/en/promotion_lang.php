@@ -15,5 +15,7 @@ $aLang = [
     'HELP_FC_PROMOTION_PLANER_TILL' => 'The date till which the promotion image will be displayed in the online shop',
     'FC_PROMOTION_PLANNER_TITLE' => 'Promotion Planner',
     'FC_PROMOTION_PLANER_IMAGE_NAME' => 'Promotion Image File Name',
-    'HELP_FC_PROMOTION_PLANER_IMAGE_NAME' => 'You do not have to fill in this field. When saving the image that you uploaded, this field will contain the file name of the image that has been uploaded'
+    'HELP_FC_PROMOTION_PLANER_IMAGE_NAME' => 'You do not have to fill in this field. When saving the image that you uploaded, this field will contain the file name of the image that has been uploaded',
+    'FC_PROMOTION_PLANNER_ACTIVE' => 'Active',
+    'HELP_FC_PROMOTION_PLANNER_ACTIVE' => 'If you check this box, the promotion image will be displayed in the online shop',
 ];

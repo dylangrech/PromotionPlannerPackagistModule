@@ -28,10 +28,14 @@ class PromotionPlannerController extends AdminDetailsController
      * @param $className
      * @return void
      */
-    public function fcSavePromotionDetails($className)
+    public function fcSavePromotionDetails($className, $sActivePromotionParam)
     {
         $soxId = $this->getEditObjectId();
         $aParams = (new \OxidEsales\Eshop\Core\Request)->getRequestEscapedParameter("editval");
+
+        if (!isset($aParams[$sActivePromotionParam])) {
+            $aParams[$sActivePromotionParam] = 0;
+        }
 
         $oModel = oxNew($className);
         $oModel->load($soxId);

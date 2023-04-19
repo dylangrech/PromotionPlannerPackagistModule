@@ -36,6 +36,16 @@
                 <table>
                     <tr>
                         <td class="edittext">
+                            [{oxmultilang ident="FC_PROMOTION_PLANNER_ACTIVE"}]
+                        </td>
+                        <td>
+                            <input type="hidden" name="editval[oxmanufacturers__fcpromotionplanneractivepromotion]" value="0">
+                            <input type="checkbox" class="edittext" name="editval[oxmanufacturers__fcpromotionplanneractivepromotion]" value="1" [{if $edit->oxmanufacturers__fcpromotionplanneractivepromotion->value == 1}]checked[{/if}] [{$readonly}]>
+                            [{oxinputhelp ident="HELP_FC_PROMOTION_PLANNER_ACTIVE"}]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="edittext">
                             [{oxmultilang ident="FC_PROMOTION_PLANER_FROM"}]
                         </td>
                         <td class="edittext">

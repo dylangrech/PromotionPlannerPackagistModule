@@ -15,8 +15,9 @@ class Manufacturer extends Manufacturer_parent
     {
         $iActiveFrom = PromotionPlanner::fcGetPromotionPlannerActiveFrom($this->oxmanufacturers__fcpromotionplanneractivefrom);
         $iActiveTill = PromotionPlanner::fcGetPromotionPlannerActiveTill($this->oxmanufacturers__fcpromotionplanneractivetill);
+        $isActive = PromotionPlanner::fcGetPromotionPlannerActiveValue($this->oxmanufacturers__fcpromotionplanneractivepromotion);
         $iCurrentTime = strtotime('now');
-        if ($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) {
+        if (($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) && $isActive === true) {
             return true;
         }
         return false;

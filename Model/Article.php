@@ -15,8 +15,9 @@ class Article extends Article_parent
     {
         $iActiveFrom = PromotionPlanner::fcGetPromotionPlannerActiveFrom($this->oxarticles__fcpromotionplanneractivefrom);
         $iActiveTill = PromotionPlanner::fcGetPromotionPlannerActiveTill($this->oxarticles__fcpromotionplanneractivetill);
+        $isActive = PromotionPlanner::fcGetPromotionPlannerActiveValue($this->oxarticles__fcpromotionplanneractivepromotion);
         $iCurrentTime = strtotime('now');
-        if ($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) {
+        if (($iActiveFrom <= $iCurrentTime && $iCurrentTime <= $iActiveTill) && $isActive === true) {
             return true;
         }
         return false;

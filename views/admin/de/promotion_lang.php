@@ -15,5 +15,7 @@ $aLang = [
     'HELP_FC_PROMOTION_PLANER_TILL' => 'Das Datum, bis zu dem das Werbebild im Online-Shop angezeigt wird',
     'FC_PROMOTION_PLANNER_TITLE' => 'Promotion Planner',
     'FC_PROMOTION_PLANER_IMAGE_NAME' => 'Name der Werbebilddatei',
-    'HELP_FC_PROMOTION_PLANER_IMAGE_NAME' => 'Dieses Feld müssen Sie nicht ausfüllen. Beim Speichern des hochgeladenen Bildes enthält dieses Feld den Dateinamen des hochgeladenen Bildes'
+    'HELP_FC_PROMOTION_PLANER_IMAGE_NAME' => 'Dieses Feld müssen Sie nicht ausfüllen. Beim Speichern des hochgeladenen Bildes enthält dieses Feld den Dateinamen des hochgeladenen Bildes',
+    'FC_PROMOTION_PLANNER_ACTIVE' => 'Aktiv',
+    'HELP_FC_PROMOTION_PLANNER_ACTIVE' => 'Wenn Sie das Feld aktivieren, wird das Werbebanner im Online-Shop angezeigt',
 ];

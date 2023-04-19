@@ -26,6 +26,6 @@ class CategoryPromotionController extends PromotionPlannerController
     public function save()
     {
         parent::save();
-        $this->fcSavePromotionDetails($this->oModel);
+        $this->fcSavePromotionDetails($this->oModel, 'oxcategories__fcpromotionplanneractivepromotion');
     }
 }

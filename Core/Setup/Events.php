@@ -48,7 +48,7 @@ class Events extends Base
         self::fcExecuteQueryIfColumnDoesNotExist('oxmanufacturers', 'FCPROMOTIONPLANNERACTIVEPROMOTION', "ALTER TABLE oxmanufacturers ADD FCPROMOTIONPLANNERACTIVEPROMOTION tinyint(1) COMMENT 'Promotion Active' NOT NULL DEFAULT '0' AFTER FCPROMOTIONPLANNERIMAGE", $oDb);
         self::fcExecuteQueryIfColumnDoesNotExist('oxcategories', 'FCPROMOTIONPLANNERACTIVEFROM', "ALTER TABLE oxcategories ADD FCPROMOTIONPLANNERACTIVEFROM datetime COMMENT 'Promotion Active From Date' NOT NULL DEFAULT '0000-00-00 00:00:00' AFTER OXTITLE", $oDb);
         self::fcExecuteQueryIfColumnDoesNotExist('oxcategories', 'FCPROMOTIONPLANNERACTIVETILL', "ALTER TABLE oxcategories ADD FCPROMOTIONPLANNERACTIVETILL datetime COMMENT 'Promotion Active Till Date' NOT NULL DEFAULT '0000-00-00 00:00:00' AFTER FCPROMOTIONPLANNERACTIVEFROM", $oDb);
-        self::fcExecuteQueryIfColumnDoesNotExist('oxcategories', 'FCPROMOTIONPLANNERIMAGE', "ALTER TABLE oxcategories ADD FCPROMOTIONPLANNERIMAGE text COMMENT 'Promotion Image' NOT NULL DEFAULT AFTER FCPROMOTIONPLANNERACTIVETILL", $oDb);
+        self::fcExecuteQueryIfColumnDoesNotExist('oxcategories', 'FCPROMOTIONPLANNERIMAGE', "ALTER TABLE oxcategories ADD FCPROMOTIONPLANNERIMAGE text COMMENT 'Promotion Image' NOT NULL AFTER FCPROMOTIONPLANNERACTIVETILL", $oDb);
         self::fcExecuteQueryIfColumnDoesNotExist('oxcategories', 'FCPROMOTIONPLANNERACTIVEPROMOTION', "ALTER TABLE oxcategories ADD FCPROMOTIONPLANNERACTIVEPROMOTION tinyint(1) COMMENT 'Promotion Active' NOT NULL DEFAULT '0' AFTER FCPROMOTIONPLANNERIMAGE", $oDb);
     }
 

@@ -25,7 +25,7 @@
                 <h3>[{oxmultilang ident="FC_PROMOTION_PLANNER_IMAGE_PREVIEW_TITLE"}]</h3>
                 <p>[{oxmultilang ident="FC_PROMOTION_PLANNER_IMAGE_PREVIEW_INSTRUCTIOPNS"}]</p>
                 [{assign var="sPromotionImage" value=$edit->fcGetImageUrl()}]
-                <img style="display: block; margin-left: auto; margin-right: auto;"  class="img-responsive" id="output"/>
+                <img src="[{$sPromotionImage}]" style="display: block; margin-left: auto; margin-right: auto;"  class="img-responsive" id="output"/>
             </td>
             <td class="picEditCol">
                 <table>
@@ -101,8 +101,6 @@
         let output = document.getElementById('output');
         output.removeAttribute('src');
         output.src = URL.createObjectURL(event.target.files[0]);
-        output.width = 800;
-        output.height = 200;
         output.onload = function() {
             URL.revokeObjectURL(output.src) // free memory
         }

@@ -103,8 +103,6 @@
         let output = document.getElementById('output');
         output.removeAttribute('src');
         output.src = URL.createObjectURL(event.target.files[0]);
-        output.width = 800;
-        output.height = 200;
         output.onload = function() {
             URL.revokeObjectURL(output.src) // free memory
         }

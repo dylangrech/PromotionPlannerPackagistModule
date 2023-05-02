@@ -1,16 +1,10 @@
 [{if $oView->getClassName()=='details'}]
     [{if $oDetailsProduct->fcCheckIfPromotionIsActive() === true}]
-        <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-center">
-                            <img style=" width: 1000px; height: 200px; display: block; margin-left: auto; margin-right: auto;" class="img-responsive" src="[{$oDetailsProduct->fcGetImageUrl()}]">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <img style="width: 100%" src="[{$oDetailsProduct->fcGetImageUrl()}]">
+    [{/if}]
+    <br>
+    [{if $oDetailsProduct->fcCheckIfManufacturerPromotionIsActive() === true}]
+        <img style="width: 100%" src="[{$oDetailsProduct->fcGetManufacturerImageUrl()}]">
     [{/if}]
 [{/if}]
 [{$smarty.block.parent}]

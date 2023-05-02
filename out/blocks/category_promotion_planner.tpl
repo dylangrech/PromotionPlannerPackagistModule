@@ -5,7 +5,7 @@
             <div class="card text-center">
                 <div class="card-body">
                     <div class="d-flex justify-content-center">
-                        <img style="width: 1000px; height: 200px; display: block; margin-left: auto; margin-right: auto;" class="img-responsive" src="[{$actCategory->fcGetImageUrl()}]">
+                        <a target="_blank" href="[{$actCategory->fcGetCategoryPromotionUrl()}]"><img style="width: 1000px; height: 200px; display: block; margin-left: auto; margin-right: auto;" class="img-responsive" src="[{$actCategory->fcGetImageUrl()}]"></a>
                     </div>
                 </div>
             </div>

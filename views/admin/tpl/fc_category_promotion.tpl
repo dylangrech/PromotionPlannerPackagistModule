@@ -24,9 +24,7 @@
             <td class="picPreviewCol" valign="top">
                 <h3>[{oxmultilang ident="FC_PROMOTION_PLANNER_IMAGE_PREVIEW_TITLE"}]</h3>
                 <p>[{oxmultilang ident="FC_PROMOTION_PLANNER_IMAGE_PREVIEW_INSTRUCTIOPNS"}]</p>
-                <div id="exampleBox" style="width: 800px; text-align: center; height: 100px; border: 1px solid black; padding: 50px; margin: 20px;">
-                    <p>[{oxmultilang ident="FC_PROMOTION_PLANNER_IMAGE_PREVIEW_EXAMPLE_SIZE"}]</p>
-                </div>
+                [{assign var="sPromotionImage" value=$edit->fcGetImageUrl()}]
                 <img style="display: block; margin-left: auto; margin-right: auto;"  class="img-responsive" id="output"/>
             </td>
             <td class="picEditCol">
@@ -61,6 +59,15 @@
                     </tr>
                     <tr>
                         <td class="edittext">
+                            [{oxmultilang ident="FC_PROMOTION_PLANER_URL"}]
+                        </td>
+                        <td class="edittext">
+                            <input step="1" type="text" class="editinput" name="editval[oxcategories__fcpromotionplannerpromotionurl]" value="[{$edit->oxcategories__fcpromotionplannerpromotionurl->value}]" [{$readonly}]>
+                            [{oxinputhelp ident="HELP_FC_PROMOTION_PLANER_URL"}]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="edittext">
                             [{oxmultilang ident="FC_PROMOTION_PLANER_IMAGE_NAME"}]
                         </td>
                         <td class="edittext">
@@ -91,9 +98,8 @@
 </form>
 <script>
     var loadFile = function(event) {
-        let divExample = document.getElementById('exampleBox');
-        divExample.style.display = 'none';
-        var output = document.getElementById('output');
+        let output = document.getElementById('output');
+        output.removeAttribute('src');
         output.src = URL.createObjectURL(event.target.files[0]);
         output.width = 800;
         output.height = 200;

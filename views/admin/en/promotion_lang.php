@@ -18,4 +18,6 @@ $aLang = [
     'HELP_FC_PROMOTION_PLANER_IMAGE_NAME' => 'You do not have to fill in this field. When saving the image that you uploaded, this field will contain the file name of the image that has been uploaded',
     'FC_PROMOTION_PLANNER_ACTIVE' => 'Active',
     'HELP_FC_PROMOTION_PLANNER_ACTIVE' => 'If you check this box, the promotion image will be displayed in the online shop',
+    'FC_PROMOTION_PLANER_URL' => 'Promotion URL',
+    'HELP_FC_PROMOTION_PLANER_URL' => 'Fill this field with a URL. When the user clicks on the promotion image, the user will be directed to this url',
 ];

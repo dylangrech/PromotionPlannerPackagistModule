@@ -43,6 +43,28 @@ class Article extends Article_parent
     }
 
     /**
+     * Returns the url
+     *
+     * @return mixed
+     */
+    public function fcGetArticlePromotionUrl()
+    {
+        return $this->oxarticles__fcpromotionplannerpromotionurl;
+    }
+
+    /**
+     * Returns the url from the manufacturer table
+     *
+     * @return mixed
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
+     */
+    public function fcGetManufacturerPromotionUrl()
+    {
+        return $this->fcGetColumnValueFromManufacturerTableById('FCPROMOTIONPLANNERPROMOTIONURL');
+    }
+
+    /**
      * Returns the image url from the manufacturer table
      *
      * @return string|void
@@ -52,7 +74,7 @@ class Article extends Article_parent
         if ($this->fcCheckIfManufacturerPromotionIsActive()) {
             $sPromotionImage = $this->fcGetColumnValueFromManufacturerTableById('FCPROMOTIONPLANNERIMAGE');
             $sBaseURL = (new \OxidEsales\Eshop\Core\ViewConfig)->getBaseDir();
-            return $sBaseURL.'/out/pictures/master/product/promotionImages/'.$sPromotionImage;
+            return $sBaseURL.'/out/pictures/master/manufacturer/promotionImages/'.$sPromotionImage;
         }
     }
 

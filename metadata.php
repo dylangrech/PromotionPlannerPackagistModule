@@ -45,11 +45,6 @@ $aModule = [
             'file'     => 'promotion_planner.tpl'
         ],
         [
-            'template' => 'page/details/inc/productmain.tpl',
-            'block' => 'details_productmain_manufacturersicon',
-            'file' => 'manufacturer_promotion_planner.tpl'
-        ],
-        [
             'template' => 'page/list/list.tpl',
             'block' => 'page_list_listhead',
             'file' => 'category_promotion_planner.tpl'

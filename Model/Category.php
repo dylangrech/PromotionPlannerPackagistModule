@@ -36,4 +36,14 @@ class Category extends Category_parent
             return $sBaseURL.'/out/pictures/master/category/promotionImages/'.$sPromotionImage;
         }
     }
+
+    /**
+     * Returns the url
+     *
+     * @return mixed
+     */
+    public function fcGetCategoryPromotionUrl()
+    {
+        return $this->oxcategories__fcpromotionplannerpromotionurl;
+    }
 }

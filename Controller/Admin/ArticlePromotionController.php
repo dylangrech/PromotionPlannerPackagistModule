@@ -7,6 +7,11 @@ class ArticlePromotionController extends PromotionPlannerController
     protected $_sThisTemplate = "fc_article_promotion.tpl";
     protected $oModel = \OxidEsales\Eshop\Application\Model\Article::class;
 
+    public function test()
+    {
+        return 1;
+    }
+
     /**
      * Loads article promotion related information - Smarty
      * engine, returns name of template file "fc_article_promotion.tpl".

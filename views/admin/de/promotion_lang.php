@@ -18,4 +18,6 @@ $aLang = [
     'HELP_FC_PROMOTION_PLANER_IMAGE_NAME' => 'Dieses Feld müssen Sie nicht ausfüllen. Beim Speichern des hochgeladenen Bildes enthält dieses Feld den Dateinamen des hochgeladenen Bildes',
     'FC_PROMOTION_PLANNER_ACTIVE' => 'Aktiv',
     'HELP_FC_PROMOTION_PLANNER_ACTIVE' => 'Wenn Sie das Feld aktivieren, wird das Werbebanner im Online-Shop angezeigt',
+    'FC_PROMOTION_PLANER_URL' => 'Werbebanner URL',
+    'HELP_FC_PROMOTION_PLANER_URL' => 'Füllen Sie dieses Feld mit einer URL aus. Wenn der Benutzer auf das Werbebild klickt, wird der Benutzer zu dieser URL weitergeleitet',
 ];
